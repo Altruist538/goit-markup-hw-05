@@ -15,6 +15,17 @@ h6,
 p {
 	margin: 0;
 }
+/* a:hover::after {
+	display: block;
+
+	content: "";
+	height: 4px;
+	width: 100%;
+	background-color: var(--firma-color);
+
+	bottom: 0;
+} */
+
 img {
 	display: block;
 	max-width: 100%;
@@ -119,6 +130,27 @@ body {
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: var(--firma-background-color);
+	transition-property: color;
+	transition-duration: 2500ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 0;
+}
+.header-list > li > a {
+	padding: 24px 0;
+	position: relative;
+}
+.current {
+	color: var(--hero-btn-color);
+}
+.current::after {
+	bottom: -3px;
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background: var(--hero-btn-color);
+	border-radius: 2px;
 }
 .mail-nav:hover,
 .mail-nav:focus,
@@ -138,6 +170,10 @@ address {
 	letter-spacing: 0.02em;
 	color: var(--text-color);
 	margin-left: auto;
+	transition-property: color;
+	transition-duration: 2500ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 0;
 }
 /* ---- /header ---- */
 /* ---- hero ---- */
@@ -326,16 +362,6 @@ address {
 	background-color: var(--hero-btn-color);
 }
 /* ---- /Our Team section ---- */
-.hero-portfolio-btn:hover,
-.hero-portfolio-btn:focus {
-	cursor: pointer;
-	background-color: var(--hero-btn-color);
-	border: 1px solid var(--hero-btn-color);
-	border-radius: 4px;
-	color: var(--white-color);
-	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	border-radius: 4px;
-}
 
 .hero-caption {
 	font-family: "Roboto", sans-serif;
@@ -374,6 +400,20 @@ address {
 	border: 1px solid var(--white-text-footer);
 	border-radius: 4px;
 	padding: 12px 24px;
+	transition-property: background-color, color;
+	transition-duration: 2500ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 0;
+}
+.hero-portfolio-btn:hover,
+.hero-portfolio-btn:focus {
+	cursor: pointer;
+	background-color: var(--hero-btn-color);
+	border: 1px solid var(--hero-btn-color);
+	border-radius: 4px;
+	color: var(--white-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
 }
 .title-portfolio {
 	font-weight: 500;
@@ -399,7 +439,12 @@ address {
 	row-gap: 48px;
 	column-gap: 24px;
 }
-
+.cards-portfolio-content {
+	transition-property: box-shadow;
+	transition-duration: 2500ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-delay: 0;
+}
 .cards-portfolio-content:hover,
 .cards-portfolio-content:focus {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
