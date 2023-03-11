@@ -132,7 +132,7 @@ body {
 	color: var(--hero-btn-color);
 }
 .current::after {
-	bottom: -5px;
+	bottom: -4px;
 	content: "";
 	display: block;
 	position: absolute;
@@ -141,10 +141,8 @@ body {
 	background: var(--hero-btn-color);
 	border-radius: 2px;
 }
-.mail-nav:hover,
-.mail-nav:focus,
-.site-nav:hover,
-.site-nav:focus {
+.mail-nav:is(:hover, :focus),
+.site-nav:is(:hover, :focus) {
 	color: var(--firma-color);
 }
 address {
@@ -207,6 +205,10 @@ address {
 	height: 24px;
 	border-radius: 50%;
 	background-color: var(--white-logo-color);
+
+	transition-property: fill, background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-modal-btn-icon {
 	display: flex;
@@ -244,10 +246,12 @@ address {
 .hero-container {
 	display: inline-block;
 }
-.hero-btn:hover,
-.hero-btn:focus {
+.hero-btn:is(:hover, :focus) {
 	cursor: pointer;
 	background-color: var(--hero-btn-color);
+
+	border: 1px solid var(--firma-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .hero-btn {
 	font-family: "Roboto";
@@ -269,6 +273,10 @@ address {
 	margin-top: 48px;
 	margin-left: auto;
 	margin-right: auto;
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ---- /hero ---- */
 /* ---- Properties section ---- */
@@ -395,9 +403,12 @@ address {
 	height: 100%;
 	border-radius: 50%;
 	background-color: var(--firma-color);
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-social-link:hover,
-.team-social-link:focus {
+.team-social-link:is(:hover, :focus) {
 	background-color: var(--hero-btn-color);
 }
 /* ---- /Our Team section ---- */
@@ -443,8 +454,7 @@ address {
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-portfolio-btn:hover,
-.hero-portfolio-btn:focus {
+.hero-portfolio-btn:is(:hover, :focus) {
 	cursor: pointer;
 	background-color: var(--hero-btn-color);
 	border: 1px solid var(--hero-btn-color);
@@ -485,7 +495,7 @@ address {
 	transition-property: transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	padding: 40px 35px;
+	padding: 40px 32px;
 
 	font-family: "Roboto";
 	font-style: normal;
@@ -512,8 +522,7 @@ address {
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.cards-portfolio-content:hover,
-.cards-portfolio-content:focus {
+.cards-portfolio-content:is(:hover, :focus) {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
@@ -548,9 +557,12 @@ address {
 	color: var(--grey-color);
 	border: 1px solid var(--grey-color);
 	border-radius: 4px;
+
+	transition-property: color, background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customers-link:hover,
-.customers-link:focus {
+.customers-link:is(:hover, :focus) {
 	color: var(--hero-btn-color);
 	border: 1px solid var(--hero-btn-color);
 }
@@ -615,9 +627,12 @@ address {
 	height: 100%;
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social-link:hover,
-.footer-social-link:focus {
+.footer-social-link:is(:hover, :focus) {
 	background-color: var(--icon-salat);
 }
 /* ---- /footer----*/
